@@ -48,6 +48,8 @@ export default async function Page({
               alt="Foto ilustrativa"
               fill={true}
               quality={100}
+              priority={true}
+              sizes="(max-width: 480px) 100vw, (max-width: 1024px) 75vw, 60vw"
             />
           </div>
         </section>

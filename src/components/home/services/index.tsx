@@ -18,6 +18,7 @@ export function Services({ object }: HomeProps) {
             src={object.metadata.about.banner.url}
             quality={100}
             fill={true}
+            sizes="(max-width: 480px) 100vw, (max-width: 1024px) 75vw, 60vw"
           />
         </div>
       </section>
@@ -25,10 +26,8 @@ export function Services({ object }: HomeProps) {
       <h2 className={styles.servicesTitle}>Conheça nossos serviços</h2>
 
       <section className={styles.services}>
-
         {object.metadata.services.map((service) => (
           <article key={service.description} className={styles.service}>
-
             <div className={styles.innerService}>
               <Image
                 className={styles.imageService}
@@ -36,13 +35,13 @@ export function Services({ object }: HomeProps) {
                 src={service.image.url}
                 quality={100}
                 fill={true}
+                sizes="(max-width: 480px) 100vw, (max-width: 1024px) 75vw, 60vw"
               />
             </div>
-            
+
             <p>{service.description}</p>
           </article>
         ))}
-
       </section>
     </>
   );
